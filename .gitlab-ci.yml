@@ -7,4 +7,5 @@ deploy_to_aws:
   only:
     - main
   script:
-    - aws autoscaling start-instance-refresh --auto-scaling-group-name GozemProjectStack-gozemasg-PPZDbTc91WyL --preferences '{"MaxHealthyPercentage": 150, "MinHealthyPercentage": 50 }'
+    #- aws autoscaling start-instance-refresh --auto-scaling-group-name GozemProjectStack-gozemasg-PPZDbTc91WyL --preferences '{"MaxHealthyPercentage": 150, "MinHealthyPercentage": 50 }'
+    - aws autoscaling start-instance-refresh --auto-scaling-group-name GozemProjectStack-gozemasg-PPZDbTc91WyL
