@@ -8,6 +8,7 @@ var MongoDBStore = require("connect-mongodb-session")(session);
 
 import baseRoutes from "./routes/index";
 import authRoutes, { trimStrings } from "./routes/auth";
+import testRoutes from "./routes/test";
 import { connect } from "./connectmong";
 import {
   authenticateRequest,
@@ -72,8 +73,11 @@ if (env == "development") {
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(strategy);
+//add testing path
+
+app.use("/test", testRoutes);
 app.use("/auth", authRoutes);
-app.use("/", authenticateRequest, baseRoutes);
+app.use("/", baseRoutes);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   res.status(404).end();

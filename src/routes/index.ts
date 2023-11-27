@@ -13,7 +13,7 @@ import {
 import { deletePermission, deleteRole } from "../controller/deleting/service";
 import { putRole } from "../controller/replacing/service";
 import { updatePassword, updateUser } from "../controller/updating/service";
-import { authorizeRequest } from "../controller/authenticating/service";
+//import { authorizeRequest } from "../controller/authenticating/service";
 
 const router: Router = Router();
 
