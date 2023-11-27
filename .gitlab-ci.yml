@@ -1,0 +1,12 @@
+stages:
+  - deploy
+deploy_to_aws:
+  stage: deploy
+  only:
+    - main
+  script:
+    - "cd ~"
+    - git clone https://github.com/scneba/node_typescript_base.git
+    - cd node_typescript_base
+    - npm install
+    - npm run dev
